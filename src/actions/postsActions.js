@@ -14,3 +14,19 @@ export const getPostsSuccess = (posts) => ({
 export const getPostFailure = () => ({
     type: GET_POSTS_FAILURE,
 })
+
+export function fetchPosts() {
+    return async (dispatch) => {
+        dispatch(getPosts())
+
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+            const data = await response.json()
+            
+            dispatch(getPostsSuccess(data))
+
+        } catch (error) {
+            dispatch(getPostFailure())
+        }
+    }
+}
