@@ -5,8 +5,8 @@ import {
     Route,
     Redirect
 } from 'react-router-dom'
-import DashboardPage from '../pages/DashboardPage' 
-import PostPage from '../pages/PostPage'
+import DashboardPage from './pages/DashboardPage' 
+import PostPage from './pages/PostPage'
 
 
 const App = () => {

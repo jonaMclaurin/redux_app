@@ -11,3 +11,6 @@ const DashboardPage = () => (
         </Link>
     </section>
 )
+
+
+export default DashboardPage
